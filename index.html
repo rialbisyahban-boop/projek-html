@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rstream ID - Beranda</title>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/anda.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+
+<body>
+    <!-- header  -->
+    <header class="navbar">
+        <div class="nav-left">
+            <a href="index.html" class="logo">
+                <span class="material-symbols-outlined logo-icon">play_circle</span>
+                <span class="logo-text">Rstream<sup class="id">ID</sup></span>
+            </a>
+        </div>
+
+        <div class="nav-center">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Telusuri">
+                <button id="searchBtn" aria-label="Cari">
+                    <span class="material-symbols-outlined">search</span>
+                </button>
+            </div>
+            <button class="icon-btn mic-btn" id="micBtn" title="Penelusuran suara">
+                <span class="material-symbols-outlined">mic</span>
+            </button>
+        </div>
+
+        <div class="nav-right">
+            <button class="icon-btn" id="themeToggle" title="Ubah Mode">
+                <span class="material-symbols-outlined" id="themeIcon">light_mode</span>
+            </button>
+
+            <div id="userAuthSection">
+                <button id="btnLoginNav" class="btn-login-nav">
+                    <a href="/html/anda.html">
+                        <span class="material-symbols-outlined">account_circle</span>Login
+                    </a>
+                </button>
+                <div id="userProfileDropdown" class="profile-container">
+                    <div class="profile-avatar" id="navAvatar">U</div>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <p id="dropdownUserName"><strong>User</strong></p>
+                        <p id="dropdownUserEmail" class="mail"></p>
+                        <hr>
+                        <button id="btnLogout"><span class="material-symbols-outlined">logout</span> Keluar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- sidebar  -->
+    <div class="main-container">
+        <aside class="sidebar">
+            <a href="index.html" class="sidebar-item active">
+                <span class="material-symbols-outlined">home</span>
+                <span>Beranda</span>
+            </a>
+            <a href="html/download.html" class="sidebar-item">
+                <span class="material-symbols-outlined">download</span>
+                <span>Download</span>
+            </a>
+            <a href="html/anda.html" class="sidebar-item">
+                <span class="material-symbols-outlined">account_circle</span>
+                <span>Anda</span>
+            </a>
+        </aside>
+
+        <!-- main  -->
+        <main class="content-area">
+            <section class="page-tab">
+                <div id="inlinePlayerSection" class="player-section display">
+                    <div class="player-header">
+                        <h2 id="playingTitle">Judul Video</h2>
+                        <div class="player-controls-right">
+                            <button class="close-player-btn" id="closePlayerBtn">
+                                <span class="material-symbols-outlined">close</span> Close
+                            </button><br>
+                            <button class="download-player-btn" id="downloadPlayerBtn">
+                                <span class="material-symbols-outlined">download</span>download
+                            </button>
+                        </div>
+                    </div>
+                    <div id="inlinePlayerContainer" class="video-container"></div>
+                </div>
+
+                <p id="statusMessage" class="status-msg">Memuat video...</p>
+                <div class="video-grid" id="movieGrid"></div>
+            </section>
+        </main>
+    </div>
+
+
+    <!-- Script Pemuat Utama -->
+    <script src="js/config.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/voice.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

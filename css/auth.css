@@ -1,0 +1,133 @@
+/* mengatur tombol login  */
+.btn-login-nav {
+    background: transparent;
+    border: 1px solid #3ea6ff;
+    color: #3ea6ff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* teks login  */
+.btn-login-nav a {
+    text-decoration: none !important;
+    color: #3ea6ff;
+}
+
+/* untuk hover botton login  */
+.btn-login-nav:hover {
+    background: rgba(62, 166, 255, 0.1);
+}
+
+/* wadah pembungkus profile  melayang  */
+.profile-container {
+    position: relative;
+    display: none;
+}
+
+/* mengatur pop up menu melayang warna putih yang muncul di bawah avatar profile  */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 45px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 12px;
+    min-width: 180px;
+    z-index: 100;
+    color: #333;
+}
+
+/* mengatur tombol  keluar  */
+.dropdown-menu button {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 8px;
+    text-align: left;
+    cursor: pointer;
+    color: #d9534f;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* mengatur teks email  */
+.dropdown-user-email {
+    font-size: 12px;
+    color: #888;
+}
+
+/* mengatur card  form login dan register */
+.auth-card {
+    background-color: #1a120c;
+    border: 1px solid #e5c3a6;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 400px;
+    margin: 40px auto;
+    box-shadow: 0 0 15px rgba(229, 195, 166, 0.2);
+}
+
+/* mengatur judul form  */
+.auth-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* mengatur jarak antar input form dan pengatur label input  */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* jarak antara input form dan  pengatur label input  */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* kotak input isian  */
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #333;
+    background: #121212;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+/* untuk tombol submit  */
+.btn-primary.btn-block {
+    width: 100%;
+    padding: 10px;
+    background: #e50914;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* teks dan link merah di bawah form untuk beralih antara form login dan register  */
+.auth-switch {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.auth-link {
+    color: #e50914;
+    text-decoration: none;
+}
+
+.auth-link:hover {
+    text-decoration: underline;
+}

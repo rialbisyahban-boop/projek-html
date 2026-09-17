@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rstream ID - Anda</title>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/anda.css">
+    <link rel="stylesheet" href="../css/auth.css">
+</head>
+
+<body>
+<!-- header  -->
+    <header class="navbar">
+        <div class="nav-left">
+
+            <a href="index.html" class="logo">
+                <span class="material-symbols-outlined logo-icon">play_circle</span>
+                <span class="logo-text">Rstream<sup class="id">ID</sup></span>
+            </a>
+        </div>
+        <div class="nav-right">
+            <div id="userAuthSection">
+
+                <div id="userProfileDropdown" class="profile-container">
+                    <div class="profile-avatar" id="navAvatar">U</div>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <p id="dropdownUserName"><strong>User</strong></p>
+                        <p id="dropdownUserEmail" class="dropdown-user-email"></p>
+                        <hr>
+                        <button id="btnLogout"><span class="material-symbols-outlined">logout</span> Keluar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+<!-- sedibar  -->
+    <div class="main-container">
+        <aside class="sidebar">
+            <a href="../index.html" class="sidebar-item">
+                <span class="material-symbols-outlined">home</span>
+                <span>Beranda</span>
+            </a>
+            <a href="download.html" class="sidebar-item">
+                <span class="material-symbols-outlined">Download</span>
+                <span>Download</span>
+            </a>
+            <a href="anda.html" class="sidebar-item active">
+                <span class="material-symbols-outlined">account_circle</span>
+                <span>Anda</span>
+            </a>
+        </aside>
+<!-- main  -->
+        <main class="content-area">
+            <section class="page-tab">
+                <div id="andaGuestView" class="auth-card">
+                    <div id="inlineLoginFormContainer">
+                        <h2 class="auth-title">Login ke Rstream ID</h2>
+                        <form id="inlineLoginForm">
+                            <div class="form-group">
+                                <label for="inlineLoginEmail">Email</label>
+                                <input type="email" id="inlineLoginEmail" class="form-input"
+                                    placeholder="Masukkan email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="inlineLoginPassword">Kata Sandi</label>
+                                <input type="password" id="inlineLoginPassword" class="form-input"
+                                    placeholder="Masukkan kata sandi" required>
+                            </div>
+                            <button type="submit" class="btn-primary btn-block">Masuk</button>
+                        </form>
+                        <p class="auth-switch">
+                            Belum punya akun? <a id="inlineSwitchToRegister" class="auth-link">Daftar sekarang</a>
+                        </p>
+                    </div>
+
+                    <div id="inlineRegisterFormContainer" class="display">
+                        <h2 class="auth-title">Daftar Akun Rstream ID</h2>
+                        <form id="inlineRegisterForm">
+                            <div class="form-group">
+                                <label for="inlineRegisterName">Nama Lengkap</label>
+                                <input type="text" id="inlineRegisterName" class="form-input"
+                                    placeholder="Masukkan nama lengkap" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="inlineRegisterEmail">Email</label>
+                                <input type="email" id="inlineRegisterEmail" class="form-input"
+                                    placeholder="Masukkan email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="inlineRegisterPassword">Kata Sandi</label>
+                                <input type="password" id="inlineRegisterPassword" class="form-input"
+                                    placeholder="Buat kata sandi" required>
+                            </div>
+                            <button type="submit" class="btn-primary btn-block">Daftar</button>
+                        </form>
+                        <p class="auth-switch">
+                            Sudah punya akun? <a id="inlineSwitchToLogin" class="auth-link">Login di sini</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div id="andaUserView" class="display">
+                    <div class="user-profile-header">
+                        <div class="profile-avatar-xl" id="profilePageAvatar">U</div>
+                        <div>
+                            <h2 id="profilePageName">Rstream User</h2>
+                            <p class="user-set" id="profilePageEmail">@rstream_user</p>
+                        </div>
+                    </div>
+                    <hr class="divider">
+                    <h3 class="section-subtitle">
+                        <span class="material-symbols-outlined">history</span> Histori Tontonan
+                    </h3>
+                    <div class="video-grid" id="historyGrid"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/player.js"></script>
+    <script src="../js/home.js"></script>
+    <script src="../js/anda.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/voice.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>

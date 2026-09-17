@@ -1,0 +1,344 @@
+/* untuk mengatur layout dasarnya */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", "Arial", sans-serif;
+}
+
+/* untuk mengatur sedibar dan content utama */
+.main-container {
+    display: flex;
+    margin-top: 56px;
+}
+
+.content-area {
+    margin-left: 72px;
+    padding: 12px 24px;
+    width: calc(100% - 72px);
+}
+
+
+/* mode gelap*/
+
+
+/* untuk background body */
+body.dark-mode, body {
+    background-color: #0d0a08; 
+    color: #ffd5b2;
+}
+
+
+/* untuk navigasi & sidebar gelap */
+body.dark-mode .navbar,
+body.dark-mode .sidebar {
+    background-color: #140e0a;
+    border-bottom: 1px solid #2a1e17;
+}
+
+/* untuk mengatur warna text  logo di sedibarnya*/
+body.dark-mode .logo-text,
+body.dark-mode .icon-btn,
+body.dark-mode .sidebar-item {
+    color: #e5c3a6; 
+}
+/* untuk mengatur warna dan latar nya jika kursor mengarah ke sedibar */
+body.dark-mode .icon-btn:hover,
+body.dark-mode .sidebar-item:hover,
+body.dark-mode .sidebar-item.active {
+    background-color: #2a1e17;
+    color: #ffd5b2;
+    box-shadow: inset 2px 0 0 #e5c3a6; /* Aksen neon tipis saat aktif */
+}
+
+/* untuk mengatur warna box pencariannya*/
+body.dark-mode .search-box input {
+    background-color: #140e0a;
+    border: 1px solid #3a261c;
+    color: #ffd5b2;
+}
+
+
+/* untuk mengatur warna saat box pencarian di tekan */
+body.dark-mode .search-box input:focus {
+    border-color: #e5c3a6;
+    box-shadow: 0 0 8px rgba(229, 195, 166, 0.4);
+}
+
+/* mewarnai latar pencarian */
+body.dark-mode .search-box button {
+    background-color: #2a1e17;
+    border: 1px solid #3a261c;
+    color: #e5c3a6;
+}
+/* untuk mengatur gaya tombol kategori film*/
+body.dark-mode .chip {
+    background-color: #1a120c;
+    color: #d7b19d;
+    border: 1px solid #3a261c;
+}
+
+
+/* untuk evect neon  pada opsi yang dipilih */
+body.dark-mode .chip.active {
+    background-color: #e5c3a6;
+    color: #0d0a08;
+    font-weight: bold;
+    box-shadow: 0 0 12px #e5c3a6; 
+}
+/*untuk mengatur judul video*/
+body.dark-mode .video-title {
+    color: #e5c3a6;
+    text-shadow: 0 0 5px rgba(229, 195, 166, 0.3);
+}
+
+/* untuk warna text channel */
+
+body.dark-mode .video-info-stats {
+    color: #a88c7d;
+}
+
+
+/* mode terang */
+
+/* untuk background body */
+body.light-mode {
+    background-color: #f5ebe6; /* Coksu Terang Soft */
+    color: #4a3427;            /* Espresso Dark */
+}
+
+/* untuk navigasi & sidebar gelap */
+body.light-mode .navbar,
+body.light-mode .sidebar {
+    background-color: #ebdcd5;           /* Coksu Soft Cream */
+    border-bottom: 1px solid #d7c2b5;    /* Garis pembatas coksu */
+}
+
+/* untuk mengatur warna text  logo di sedibarnya*/
+body.light-mode .logo-text,
+body.light-mode .icon-btn,
+body.light-mode .sidebar-item {
+    color: #3b281c; /* Espresso Gelap */
+}
+
+/* untuk mengatur warna dan latar nya jika kursor mengarah ke sedibar */
+body.light-mode .icon-btn:hover,
+body.light-mode .sidebar-item:hover,
+body.light-mode .sidebar-item.active {
+    background-color: #d7c2b5;
+    color: #1a1008;
+}
+
+/* untuk mengatur warna box pencariannya*/
+body.light-mode .search-box input {
+    background-color: #ffffff;
+    border: 1px solid #cbb5a7;
+    color: #3b281c;
+}
+
+/* mewarnai latar pencarian */
+body.light-mode .search-box button {
+    background-color: #ebdcd5;
+    border: 1px solid #cbb5a7;
+    color: #3b281c;
+}
+
+
+/* untuk mengatur gaya tombol kategori film*/
+body.light-mode .chip {
+    background-color: #ebdcd5;
+    color: #4a3427;
+    border: 1px solid #d7c2b5;
+}
+
+/* untuk evect neon  pada opsi yang dipilih */
+body.light-mode .chip.active {
+    background-color: #8c644d; /* Cokelat Warm Penanda Aktif */
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(140, 100, 77, 0.3);
+}
+
+
+/*untuk mengatur judul video*/
+body.light-mode .video-title {
+    color: #2c1d13;
+    font-weight: 600;
+}
+
+/* untuk warna text channel */
+
+body.light-mode .video-info-stats {
+    color: #735746;
+}
+
+/* mengatur responsive */
+@media (max-width: 768px) {
+
+    /* Navbar Mobile */
+    .navbar {
+        padding: 0 8px;
+    }
+
+    .nav-center {
+        flex: 1;
+        margin: 0 8px;
+    }
+
+    .search-box input {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    /* membuat pindah ke bawah (Bottom Navigation Bar) */
+    .sidebar {
+        width: 100%;
+        height: 56px;
+        top: auto;
+        bottom: 0;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 0;
+        border-top: 1px solid #272727;
+        background-color: #0f0f0f;
+    }
+      /* untuk membagi rata menu di bagian bawah */
+    .sidebar-item {
+        width: auto;
+        height: 100%;
+        flex: 1;
+        border-radius: 0;
+    }
+
+    /* penyesuaian margin kiri  */
+    .content-area {
+        margin-left: 0;
+        width: 100%;
+        padding: 12px 12px 70px 12px;/* padding agar tidak tertutup sidebar bawah */
+    }
+
+    /*untuk penyesuaian video gird di hp menjadi 1 kolom*/
+    .video-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    /*mengatur ukuran video playernya */
+    .video-container iframe {
+        height: 220px;
+    }
+}
+
+
+/* untuk teks email */
+.mail {
+    font-size: 12px;
+    color: #888;
+}
+
+/* untuk botton menghapus download */
+.btn-delete-download {
+    margin-top: 8px;
+    background: #ff4757;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* menyembunyikan element*/
+.hidden {
+    display: none !important;
+}
+
+.visible {
+    display: block !important;
+}
+
+.inline-block {
+    display: inline-block !important;
+}
+
+/* membuat efect berkedip di mic */
+.listening {
+    color: #ff0000;
+    animation: pulse 1.5s infinite;
+}
+
+/* mengubah bentuk kursor menjadi pointer */
+.clickable {
+    cursor: pointer;
+}
+
+/* mengatur text data error */
+.empty-msg {
+    color: #aaa;
+    padding: 20px;
+    text-align: center;
+}
+
+.error-msg {
+    color: #ff4d4d;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* mengatur tombol download */
+.btn-download, 
+#downloadPlayerBtn, 
+.btn-quick-download {
+    background-color: #2a1e17;
+    color: #e5c3a6;
+    border: 1px solid #e5c3a6;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(229, 195, 166, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efek Hover pada tombol download */
+.btn-download:hover, 
+#downloadPlayerBtn:hover, 
+.btn-quick-download:hover {
+    background-color: #e5c3a6;
+    color: #120e0b;
+    border-color: #e5c3a6;
+    /* Box-shadow 3 lapis untuk efek glow neon lebih tajam */
+    box-shadow: 
+        0 0 10px #e5c3a6,
+        0 0 25px rgba(229, 195, 166, 0.8),
+        0 0 40px rgba(229, 195, 166, 0.4);
+}
+
+
+
+/* mengatur Notification melayang */
+#downloadToast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Warna berdasarkan status */
+.toast-success {
+    background-color: #2e7d32; /* Hijau */
+}
+
+.toast-warning {
+    background-color: #ed6c02; /* Oranye */
+}
+
+.toast-error {
+    background-color: #d32f2f; /* Merah */
+}
+

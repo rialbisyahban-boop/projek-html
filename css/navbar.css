@@ -1,0 +1,118 @@
+/* mengatur header atas */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    display: flex;
+    background-color: #121212;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    z-index: 1000;
+}
+
+/* mengatur navigasi kiri  dan kanan */
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* untuk mengatur lingkaran icon mic */
+.icon-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-btn:hover { background-color: #272727; }
+
+/* mengatur Rstream ID */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-icon { color: #ff0000; font-size: 22px; }
+.logo-text { font-weight: bold; font-size: 18px; letter-spacing: -1px; color: #ffffff; }
+.id { font-size: 10px; color: #aaa; margin-left: 2px; }
+
+/* menempatkan pencarian di tengah */
+.nav-center {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 0 1 732px;
+}
+
+/* mengatur continer pembungkus input */
+.search-box { display: flex; width: 100%; }
+
+/* mengatur kotak input */
+.search-box input {
+    width: 100%;
+    background-color: #121212;
+    border: 1px solid #303030;
+    border-radius: 40px 0 0 40px;
+    padding: 0 16px;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+}
+
+/* mengatur tombol  radius */
+.search-box button {
+    width: 64px;
+    height: 40px;
+    background-color: #222;
+    border: 1px solid #303030;
+    border-left: none;
+    border-radius: 0 40px 40px 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* mengatur profile */
+.profile-avatar {
+    width: 32px;
+    height: 32px;
+    background-color: #00bcd4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .logo-text, .id , .mic-btn {
+        display: none !important; 
+    }
+
+    .nav-center {
+        flex: 1;
+        margin: 0 8px;
+    }
+
+    .search-box input {
+        min-width: 0;
+        width: 100%;
+    }
+}

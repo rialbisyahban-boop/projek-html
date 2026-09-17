@@ -1,0 +1,56 @@
+/* menata bila menu navigasi */
+.sidebar {
+    width: 72px;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    bottom: 0;
+    background-color: #0f0f0f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4px;
+    z-index: 100;
+}
+
+/* mengatur tiap tiap menu nav */
+.sidebar-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 74px;
+    border-radius: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 10px;
+    gap: 6px;
+}
+
+/* untuk membuat hover sidebar */
+.sidebar-item:hover,
+.sidebar-item.active {
+    background-color: #272727;
+}
+
+/* responsif sidebar saat  max-widthnya 768*/
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: 56px;
+        top: auto;
+        bottom: 0;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 0;
+        border-top: 1px solid #272727;
+        box-sizing: border-box;
+    }
+
+    .sidebar-item {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
