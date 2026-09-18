@@ -28,7 +28,7 @@
 
 ## Struktur Proyek
 
-``text
+```text
 projekan-html-rialbi-syahban-zuhdi-nasution/
 ├── index.html               # Halaman utama (beranda & player)
 ├── html/
@@ -52,7 +52,7 @@ projekan-html-rialbi-syahban-zuhdi-nasution/
 │   ├── anda.js              # Logika halaman profil & histori
 │   └── download.js          # Logika halaman download
 └── asset.png                # Gambar logo/profil 
-
+```
 
 ## Cara Menjalankan Proyek
 Clone repositori ini:
